@@ -113,16 +113,6 @@ namespace EmailCore
                     if (client.Count >= 1)
                         mineMessages = client.GetMessages(0, client.Count);
 
-                    //List<MessageDTO> messageDTOs = null;
-
-                    //MessageDTO dto = new MessageDTO();
-
-                    //dto.Id = mineMessages[0].MessageId;
-                    //dto.ToEmails = mineMessages[0].To.ToString();
-                    //dto.Subject = mineMessages[0].Subject;
-                    //dto.SenderInfoFullName = mineMessages[0].From[0].Name;
-                    //dto.BodyHtmlText = mineMessages[0].HtmlBody;
-                    //dto.BodyPlainText = mineMessages[0].GetTextBody(TextFormat.Plain);
 
                     List<MessageDTO> messageDTOs = mineMessages?
                                                        .Select(m => new MessageDTO
@@ -169,29 +159,6 @@ namespace EmailCore
                 {
                     // Mandatory authentication
                     client.Authenticate(_login, _password);
-
-                    #region Temp
-
-                    //foreach (MimeEntity attachment in message.BodyParts.Where(
-                    //    p => p.ContentType.MediaType == "image" || p.IsAttachment))
-                    //{
-                    //    using (FileStream file = new FileStream("c:\\temp\\message" + i + "-" + attachment.FileName,
-                    //        FileMode.Create, FileAccess.Write))
-                    //    {
-                    //        //%USERPROFILE%\AppData\Local\Temp
-                    //        attachment.ContentObject.DecodeTo(file);
-                    //    }
-                    //}
-
-                    //MimeEntity entity = message.BodyParts
-                    //    .FirstOrDefault(mimeEntity => mimeEntity.IsAttachment && mimeEntity.ContentType.MediaType == "image");
-
-                    //using (FileStream file = new FileStream($"ImageAttachment", FileMode.Create, FileAccess.Write))
-                    //{
-                    //    entity.
-                    //}
-
-                    #endregion
 
                     MimeMessage message = client
                         .GetMessages(0, client.Count)
