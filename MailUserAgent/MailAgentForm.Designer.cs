@@ -60,28 +60,26 @@
             this.userMailAgentTabControl = new System.Windows.Forms.TabControl();
             this.SendNewEmailTabPage = new System.Windows.Forms.TabPage();
             this.InboxTabPage = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.authPassTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.authLoginTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.authRecipientFullNameTextBox = new System.Windows.Forms.TextBox();
+            this.viewAttachmentButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.deleteEmailButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.authSenderFullNameTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.authToTextBox = new System.Windows.Forms.TextBox();
+            this.pop3SenderFullNameTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.authFromTextBox = new System.Windows.Forms.TextBox();
-            this.authBodyRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.pop3FromTextBox = new System.Windows.Forms.TextBox();
+            this.pop3BodyRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.authSubjectTextBox = new System.Windows.Forms.TextBox();
-            this.messagesListBox = new System.Windows.Forms.ListBox();
-            this.authButton = new System.Windows.Forms.Button();
-            this.deleteEmailButton = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.viewAttachmentButton = new System.Windows.Forms.Button();
+            this.pop3SubjectTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.authenticationButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pop3PassTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pop3LoginTextBox = new System.Windows.Forms.TextBox();
+            this.messagesListView = new System.Windows.Forms.ListView();
+            this.ColumnHeaderId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeaderSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -283,9 +281,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(9, 79);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 13);
+            this.label16.Size = new System.Drawing.Size(50, 13);
             this.label16.TabIndex = 6;
-            this.label16.Text = "ToEmail";
+            this.label16.Text = "ToEmails";
             // 
             // toTextBox
             // 
@@ -392,22 +390,18 @@
             // 
             // InboxTabPage
             // 
+            this.InboxTabPage.Controls.Add(this.messagesListView);
             this.InboxTabPage.Controls.Add(this.viewAttachmentButton);
             this.InboxTabPage.Controls.Add(this.label10);
             this.InboxTabPage.Controls.Add(this.deleteEmailButton);
-            this.InboxTabPage.Controls.Add(this.messagesListBox);
-            this.InboxTabPage.Controls.Add(this.label3);
-            this.InboxTabPage.Controls.Add(this.authRecipientFullNameTextBox);
             this.InboxTabPage.Controls.Add(this.label4);
-            this.InboxTabPage.Controls.Add(this.authSenderFullNameTextBox);
-            this.InboxTabPage.Controls.Add(this.label5);
-            this.InboxTabPage.Controls.Add(this.authToTextBox);
+            this.InboxTabPage.Controls.Add(this.pop3SenderFullNameTextBox);
             this.InboxTabPage.Controls.Add(this.label6);
-            this.InboxTabPage.Controls.Add(this.authFromTextBox);
-            this.InboxTabPage.Controls.Add(this.authBodyRichTextBox);
+            this.InboxTabPage.Controls.Add(this.pop3FromTextBox);
+            this.InboxTabPage.Controls.Add(this.pop3BodyRichTextBox);
             this.InboxTabPage.Controls.Add(this.label7);
             this.InboxTabPage.Controls.Add(this.label9);
-            this.InboxTabPage.Controls.Add(this.authSubjectTextBox);
+            this.InboxTabPage.Controls.Add(this.pop3SubjectTextBox);
             this.InboxTabPage.Controls.Add(this.groupBox1);
             this.InboxTabPage.Location = new System.Drawing.Point(4, 22);
             this.InboxTabPage.Name = "InboxTabPage";
@@ -417,174 +411,14 @@
             this.InboxTabPage.Text = "Inbox";
             this.InboxTabPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // viewAttachmentButton
             // 
-            this.groupBox1.Controls.Add(this.authButton);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.authPassTextBox);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.authLoginTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 135);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Authorization";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Password";
-            // 
-            // authPassTextBox
-            // 
-            this.authPassTextBox.Location = new System.Drawing.Point(6, 83);
-            this.authPassTextBox.Name = "authPassTextBox";
-            this.authPassTextBox.Size = new System.Drawing.Size(188, 20);
-            this.authPassTextBox.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Login";
-            // 
-            // authLoginTextBox
-            // 
-            this.authLoginTextBox.Location = new System.Drawing.Point(6, 35);
-            this.authLoginTextBox.Name = "authLoginTextBox";
-            this.authLoginTextBox.Size = new System.Drawing.Size(188, 20);
-            this.authLoginTextBox.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(628, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Recipient Full Name";
-            // 
-            // authRecipientFullNameTextBox
-            // 
-            this.authRecipientFullNameTextBox.Location = new System.Drawing.Point(630, 78);
-            this.authRecipientFullNameTextBox.Name = "authRecipientFullNameTextBox";
-            this.authRecipientFullNameTextBox.Size = new System.Drawing.Size(242, 20);
-            this.authRecipientFullNameTextBox.TabIndex = 27;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(628, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Sender Full Name";
-            // 
-            // authSenderFullNameTextBox
-            // 
-            this.authSenderFullNameTextBox.Location = new System.Drawing.Point(630, 22);
-            this.authSenderFullNameTextBox.Name = "authSenderFullNameTextBox";
-            this.authSenderFullNameTextBox.Size = new System.Drawing.Size(242, 20);
-            this.authSenderFullNameTextBox.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(215, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "ToEmail";
-            // 
-            // authToTextBox
-            // 
-            this.authToTextBox.Location = new System.Drawing.Point(215, 78);
-            this.authToTextBox.Name = "authToTextBox";
-            this.authToTextBox.Size = new System.Drawing.Size(346, 20);
-            this.authToTextBox.TabIndex = 22;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(215, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "FromEmail";
-            // 
-            // authFromTextBox
-            // 
-            this.authFromTextBox.Location = new System.Drawing.Point(215, 22);
-            this.authFromTextBox.Name = "authFromTextBox";
-            this.authFromTextBox.Size = new System.Drawing.Size(349, 20);
-            this.authFromTextBox.TabIndex = 18;
-            // 
-            // authBodyRichTextBox
-            // 
-            this.authBodyRichTextBox.Location = new System.Drawing.Point(217, 194);
-            this.authBodyRichTextBox.Name = "authBodyRichTextBox";
-            this.authBodyRichTextBox.Size = new System.Drawing.Size(655, 290);
-            this.authBodyRichTextBox.TabIndex = 23;
-            this.authBodyRichTextBox.Text = "";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(220, 176);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Body";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(215, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Subject";
-            // 
-            // authSubjectTextBox
-            // 
-            this.authSubjectTextBox.Location = new System.Drawing.Point(215, 130);
-            this.authSubjectTextBox.Name = "authSubjectTextBox";
-            this.authSubjectTextBox.Size = new System.Drawing.Size(658, 20);
-            this.authSubjectTextBox.TabIndex = 19;
-            // 
-            // messagesListBox
-            // 
-            this.messagesListBox.FormattingEnabled = true;
-            this.messagesListBox.Location = new System.Drawing.Point(6, 194);
-            this.messagesListBox.Name = "messagesListBox";
-            this.messagesListBox.Size = new System.Drawing.Size(200, 290);
-            this.messagesListBox.TabIndex = 28;
-            // 
-            // authButton
-            // 
-            this.authButton.Location = new System.Drawing.Point(38, 107);
-            this.authButton.Name = "authButton";
-            this.authButton.Size = new System.Drawing.Size(123, 23);
-            this.authButton.TabIndex = 4;
-            this.authButton.Text = "Get Access To Inbox";
-            this.authButton.UseVisualStyleBackColor = true;
-            // 
-            // deleteEmailButton
-            // 
-            this.deleteEmailButton.Location = new System.Drawing.Point(44, 147);
-            this.deleteEmailButton.Name = "deleteEmailButton";
-            this.deleteEmailButton.Size = new System.Drawing.Size(123, 23);
-            this.deleteEmailButton.TabIndex = 29;
-            this.deleteEmailButton.Text = "Delete Message";
-            this.deleteEmailButton.UseVisualStyleBackColor = true;
+            this.viewAttachmentButton.Location = new System.Drawing.Point(749, 113);
+            this.viewAttachmentButton.Name = "viewAttachmentButton";
+            this.viewAttachmentButton.Size = new System.Drawing.Size(123, 23);
+            this.viewAttachmentButton.TabIndex = 31;
+            this.viewAttachmentButton.Text = "View Attached Image";
+            this.viewAttachmentButton.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -595,14 +429,158 @@
             this.label10.TabIndex = 30;
             this.label10.Text = "Message List";
             // 
-            // viewAttachmentButton
+            // deleteEmailButton
             // 
-            this.viewAttachmentButton.Location = new System.Drawing.Point(749, 165);
-            this.viewAttachmentButton.Name = "viewAttachmentButton";
-            this.viewAttachmentButton.Size = new System.Drawing.Size(123, 23);
-            this.viewAttachmentButton.TabIndex = 31;
-            this.viewAttachmentButton.Text = "View Attached Image";
-            this.viewAttachmentButton.UseVisualStyleBackColor = true;
+            this.deleteEmailButton.Location = new System.Drawing.Point(48, 147);
+            this.deleteEmailButton.Name = "deleteEmailButton";
+            this.deleteEmailButton.Size = new System.Drawing.Size(115, 23);
+            this.deleteEmailButton.TabIndex = 29;
+            this.deleteEmailButton.Text = "Delete Message";
+            this.deleteEmailButton.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(628, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Sender Full Name";
+            // 
+            // pop3SenderFullNameTextBox
+            // 
+            this.pop3SenderFullNameTextBox.Location = new System.Drawing.Point(630, 22);
+            this.pop3SenderFullNameTextBox.Name = "pop3SenderFullNameTextBox";
+            this.pop3SenderFullNameTextBox.Size = new System.Drawing.Size(242, 20);
+            this.pop3SenderFullNameTextBox.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(215, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "FromEmail";
+            // 
+            // pop3FromTextBox
+            // 
+            this.pop3FromTextBox.Location = new System.Drawing.Point(215, 22);
+            this.pop3FromTextBox.Name = "pop3FromTextBox";
+            this.pop3FromTextBox.Size = new System.Drawing.Size(349, 20);
+            this.pop3FromTextBox.TabIndex = 18;
+            // 
+            // pop3BodyRichTextBox
+            // 
+            this.pop3BodyRichTextBox.Location = new System.Drawing.Point(217, 142);
+            this.pop3BodyRichTextBox.Name = "pop3BodyRichTextBox";
+            this.pop3BodyRichTextBox.Size = new System.Drawing.Size(655, 342);
+            this.pop3BodyRichTextBox.TabIndex = 23;
+            this.pop3BodyRichTextBox.Text = "";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(215, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Body";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(215, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Subject";
+            // 
+            // pop3SubjectTextBox
+            // 
+            this.pop3SubjectTextBox.Location = new System.Drawing.Point(215, 70);
+            this.pop3SubjectTextBox.Name = "pop3SubjectTextBox";
+            this.pop3SubjectTextBox.Size = new System.Drawing.Size(658, 20);
+            this.pop3SubjectTextBox.TabIndex = 19;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.authenticationButton);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.pop3PassTextBox);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.pop3LoginTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 135);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Authorization";
+            // 
+            // authenticationButton
+            // 
+            this.authenticationButton.Location = new System.Drawing.Point(42, 107);
+            this.authenticationButton.Name = "authenticationButton";
+            this.authenticationButton.Size = new System.Drawing.Size(115, 23);
+            this.authenticationButton.TabIndex = 4;
+            this.authenticationButton.Text = "Load INBOX";
+            this.authenticationButton.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Password";
+            // 
+            // pop3PassTextBox
+            // 
+            this.pop3PassTextBox.Location = new System.Drawing.Point(6, 83);
+            this.pop3PassTextBox.Name = "pop3PassTextBox";
+            this.pop3PassTextBox.Size = new System.Drawing.Size(188, 20);
+            this.pop3PassTextBox.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Login";
+            // 
+            // pop3LoginTextBox
+            // 
+            this.pop3LoginTextBox.Location = new System.Drawing.Point(6, 35);
+            this.pop3LoginTextBox.Name = "pop3LoginTextBox";
+            this.pop3LoginTextBox.Size = new System.Drawing.Size(188, 20);
+            this.pop3LoginTextBox.TabIndex = 1;
+            // 
+            // messagesListView
+            // 
+            this.messagesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnHeaderId,
+            this.ColumnHeaderSubject});
+            this.messagesListView.FullRowSelect = true;
+            this.messagesListView.GridLines = true;
+            this.messagesListView.Location = new System.Drawing.Point(6, 194);
+            this.messagesListView.Name = "messagesListView";
+            this.messagesListView.Size = new System.Drawing.Size(205, 290);
+            this.messagesListView.TabIndex = 32;
+            this.messagesListView.UseCompatibleStateImageBehavior = false;
+            this.messagesListView.View = System.Windows.Forms.View.Details;
+            // 
+            // ColumnHeaderId
+            // 
+            this.ColumnHeaderId.Text = "ID";
+            this.ColumnHeaderId.Width = 40;
+            // 
+            // ColumnHeaderSubject
+            // 
+            this.ColumnHeaderSubject.Text = "Subject";
+            this.ColumnHeaderSubject.Width = 160;
             // 
             // MailAgentForm
             // 
@@ -667,26 +645,24 @@
         private System.Windows.Forms.TabPage InboxTabPage;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox authPassTextBox;
+        private System.Windows.Forms.TextBox pop3PassTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox authLoginTextBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox authRecipientFullNameTextBox;
+        private System.Windows.Forms.TextBox pop3LoginTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox authSenderFullNameTextBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox authToTextBox;
+        private System.Windows.Forms.TextBox pop3SenderFullNameTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox authFromTextBox;
-        private System.Windows.Forms.RichTextBox authBodyRichTextBox;
+        private System.Windows.Forms.TextBox pop3FromTextBox;
+        private System.Windows.Forms.RichTextBox pop3BodyRichTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox authSubjectTextBox;
+        private System.Windows.Forms.TextBox pop3SubjectTextBox;
         private System.Windows.Forms.Button deleteEmailButton;
-        private System.Windows.Forms.ListBox messagesListBox;
-        private System.Windows.Forms.Button authButton;
+        private System.Windows.Forms.Button authenticationButton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button viewAttachmentButton;
+        private System.Windows.Forms.ListView messagesListView;
+        private System.Windows.Forms.ColumnHeader ColumnHeaderId;
+        private System.Windows.Forms.ColumnHeader ColumnHeaderSubject;
     }
 }
 
