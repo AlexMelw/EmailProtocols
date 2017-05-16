@@ -198,6 +198,8 @@ signed to protect your Inbox from automated, unsolicited emails.
                     ImagePath = _imagePath
                 };
 
+                _imagePath = default(string);
+
                 var mailAgentClient = new MailAgentClient(loginTextBox.Text, passTextBox.Text);
 
                 try
