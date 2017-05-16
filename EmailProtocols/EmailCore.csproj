@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainModels\MessageDomainModel.cs" />
-    <Compile Include="MailAgentClient.cs" />
+    <Compile Include="EmailClient.cs" />
     <Compile Include="DTOs\MessageDTO.cs" />
     <Compile Include="Pop3Examples.cs" />
     <Compile Include="Program.cs" />

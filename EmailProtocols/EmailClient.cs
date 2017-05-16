@@ -15,7 +15,7 @@ using MimeKit.Text;
 
 namespace EmailCore
 {
-    public class MailAgentClient
+    public class EmailClient
     {
         private const string Localhost = "127.0.0.1";
         private const int SmtpDefaultPort = 25;
@@ -25,7 +25,7 @@ namespace EmailCore
 
         #region CONSTRUCTORS
 
-        public MailAgentClient(string login, string password)
+        public EmailClient(string login, string password)
         {
             _login = login;
             _password = password;

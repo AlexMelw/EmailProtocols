@@ -130,7 +130,7 @@ signed to protect your Inbox from automated, unsolicited emails.
             {
                 Task.Run(() =>
                 {
-                    var mailAgentClient = new MailAgentClient(pop3LoginTextBox.Text, pop3PassTextBox.Text);
+                    var mailAgentClient = new EmailClient(pop3LoginTextBox.Text, pop3PassTextBox.Text);
 
                     string messageUID = default(string);
 
@@ -200,7 +200,7 @@ signed to protect your Inbox from automated, unsolicited emails.
 
                 _imagePath = default(string);
 
-                var mailAgentClient = new MailAgentClient(loginTextBox.Text, passTextBox.Text);
+                var mailAgentClient = new EmailClient(loginTextBox.Text, passTextBox.Text);
 
                 try
                 {
@@ -216,7 +216,7 @@ signed to protect your Inbox from automated, unsolicited emails.
             {
                 Task.Run(() =>
                 {
-                    var mailAgentClient = new MailAgentClient(pop3LoginTextBox.Text, pop3PassTextBox.Text);
+                    var mailAgentClient = new EmailClient(pop3LoginTextBox.Text, pop3PassTextBox.Text);
                     _messageDTOs = mailAgentClient.GetAllMessages();
 
                     if (messagesListView.InvokeRequired)
@@ -257,7 +257,7 @@ signed to protect your Inbox from automated, unsolicited emails.
             {
                 Task.Run(() =>
                 {
-                    var mailAgentClient = new MailAgentClient(pop3LoginTextBox.Text, pop3PassTextBox.Text);
+                    var mailAgentClient = new EmailClient(pop3LoginTextBox.Text, pop3PassTextBox.Text);
                     int selectedIndex = default(int);
                     string messageUID = default(string);
 
