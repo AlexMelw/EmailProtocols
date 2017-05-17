@@ -60,6 +60,9 @@
             this.userMailAgentTabControl = new System.Windows.Forms.TabControl();
             this.SendNewEmailTabPage = new System.Windows.Forms.TabPage();
             this.InboxTabPage = new System.Windows.Forms.TabPage();
+            this.messagesListView = new System.Windows.Forms.ListView();
+            this.ColumnHeaderId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeaderSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.viewAttachmentButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.deleteEmailButton = new System.Windows.Forms.Button();
@@ -77,9 +80,6 @@
             this.pop3PassTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pop3LoginTextBox = new System.Windows.Forms.TextBox();
-            this.messagesListView = new System.Windows.Forms.ListView();
-            this.ColumnHeaderId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeaderSubject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -411,6 +411,30 @@
             this.InboxTabPage.Text = "Inbox";
             this.InboxTabPage.UseVisualStyleBackColor = true;
             // 
+            // messagesListView
+            // 
+            this.messagesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnHeaderId,
+            this.ColumnHeaderSubject});
+            this.messagesListView.FullRowSelect = true;
+            this.messagesListView.GridLines = true;
+            this.messagesListView.Location = new System.Drawing.Point(6, 194);
+            this.messagesListView.Name = "messagesListView";
+            this.messagesListView.Size = new System.Drawing.Size(205, 290);
+            this.messagesListView.TabIndex = 32;
+            this.messagesListView.UseCompatibleStateImageBehavior = false;
+            this.messagesListView.View = System.Windows.Forms.View.Details;
+            // 
+            // ColumnHeaderId
+            // 
+            this.ColumnHeaderId.Text = "ID";
+            this.ColumnHeaderId.Width = 40;
+            // 
+            // ColumnHeaderSubject
+            // 
+            this.ColumnHeaderSubject.Text = "Subject";
+            this.ColumnHeaderSubject.Width = 160;
+            // 
             // viewAttachmentButton
             // 
             this.viewAttachmentButton.Location = new System.Drawing.Point(749, 113);
@@ -557,30 +581,6 @@
             this.pop3LoginTextBox.Name = "pop3LoginTextBox";
             this.pop3LoginTextBox.Size = new System.Drawing.Size(188, 20);
             this.pop3LoginTextBox.TabIndex = 1;
-            // 
-            // messagesListView
-            // 
-            this.messagesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeaderId,
-            this.ColumnHeaderSubject});
-            this.messagesListView.FullRowSelect = true;
-            this.messagesListView.GridLines = true;
-            this.messagesListView.Location = new System.Drawing.Point(6, 194);
-            this.messagesListView.Name = "messagesListView";
-            this.messagesListView.Size = new System.Drawing.Size(205, 290);
-            this.messagesListView.TabIndex = 32;
-            this.messagesListView.UseCompatibleStateImageBehavior = false;
-            this.messagesListView.View = System.Windows.Forms.View.Details;
-            // 
-            // ColumnHeaderId
-            // 
-            this.ColumnHeaderId.Text = "ID";
-            this.ColumnHeaderId.Width = 40;
-            // 
-            // ColumnHeaderSubject
-            // 
-            this.ColumnHeaderSubject.Text = "Subject";
-            this.ColumnHeaderSubject.Width = 160;
             // 
             // MailAgentForm
             // 

@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Zerode-Plump-Mail.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NUglify, Version=1.5.5.0, Culture=neutral, PublicKeyToken=15bc7810aec21b5e, processorArchitecture=MSIL">
       <HintPath>..\packages\NUglify.1.5.5\lib\net40\NUglify.dll</HintPath>
@@ -89,6 +92,11 @@
       <Project>{69afeba5-0720-4de6-93ca-dd730463281c}</Project>
       <Name>EmailCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zerode-Plump-Mail.ico" />
+    <None Include="Resources\MailUserAgentIcon.ico" />
+    <Content Include="Zerode-Plump-Mail.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

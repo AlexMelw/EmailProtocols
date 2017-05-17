@@ -34,6 +34,8 @@ namespace MailUserAgent
 
         private void RegisterControlsProperties()
         {
+            this.Icon = Resources.MailUserAgentIcon;
+
             #region Controls Properties
 
             passTextBox.PasswordChar = '*';

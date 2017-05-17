@@ -68,5 +68,15 @@ namespace MailUserAgent.Properties {
                 return ResourceManager.GetString("ImageExtensionsFilter", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon MailUserAgentIcon {
+            get {
+                object obj = ResourceManager.GetObject("MailUserAgentIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
